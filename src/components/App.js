@@ -5,7 +5,7 @@ import './App.css'
 const App = () => {
   return (
     <div aria-label='App'>
-      <h1>Hello, me</h1>
+      <h1>Hello, you</h1>
     </div>
   )
 }
