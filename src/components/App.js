@@ -27,7 +27,7 @@ const App = () => {
       const exchanged = (secondCurrencyValue * secondCurrency?.mid) / firstCurrency?.mid;
       setFirstCurrencyValue(round(exchanged, 2))
     }
-  }, [firstCurrencyValue, secondCurrencyValue])
+  }, [firstCurrencyValue, secondCurrencyValue, firstCurrency, secondCurrency])
 
   const round = (value, decimals) => {
     return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals)
@@ -36,24 +36,30 @@ const App = () => {
   return (
     <div className='App' aria-label='App'>
       <h1>Currency App</h1>
-      <Select data={nbpData} saveToHook={setFirstCurrency} />
-      <Select data={nbpData} saveToHook={setSecondCurrency} />
-      <Input
-        id='first'
-        first={firstCurrency}
-        second={secondCurrency}
-        changeActive={setActive}
-        hook={firstCurrencyValue}
-        saveToHook={setFirstCurrencyValue}
-      />
-      <Input
-        id='second'
-        first={firstCurrency}
-        second={secondCurrency}
-        changeActive={setActive}
-        hook={secondCurrencyValue}
-        saveToHook={setSecondCurrencyValue}
-      />
+      <div className='exchange'>
+        <div className='exchange-inputs'>
+          <Input
+            id='first'
+            first={firstCurrency}
+            second={secondCurrency}
+            changeActive={setActive}
+            hook={firstCurrencyValue}
+            saveToHook={setFirstCurrencyValue}
+          />
+          <Input
+            id='second'
+            first={firstCurrency}
+            second={secondCurrency}
+            changeActive={setActive}
+            hook={secondCurrencyValue}
+            saveToHook={setSecondCurrencyValue}
+          />
+        </div>
+        <div className='exchange-selects'>
+          <Select data={nbpData} saveToHook={setFirstCurrency} />
+          <Select data={nbpData} saveToHook={setSecondCurrency} />
+        </div>
+      </div>
     </div >
   )
 }

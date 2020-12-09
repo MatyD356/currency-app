@@ -7,17 +7,14 @@ const Select = ({ data, saveToHook }) => {
   }
 
   return (
-    <div>
-      <label htmlFor='select-currency'>Wybierz Walutę</label>
-      <select onChange={(e) => handleSelectChange(e, saveToHook)} id='first-currency'>
-        <option value='' hidden>Wybierz walute</option>
-        {data.rates?.map((item, index) =>
-          <option key={item.code} value={index}>
-            {item.currency} {item.code}
-          </option>
-        )}
-      </select>
-    </div>
+    <select onChange={(e) => handleSelectChange(e, saveToHook)} id='first-currency'>
+      <option value='' hidden>Wybierz walute</option>
+      {data.rates?.map((item, index) =>
+        <option key={item.code} value={index}>
+          {item.currency}
+        </option>
+      )}
+    </select>
   )
 }
 

@@ -17,14 +17,11 @@ const Input = ({ id, hook, saveToHook, changeActive, first, second }) => {
   }
 
   return (
-    <div>
-      <label>Podaj ilość waluty</label>
-      <input
-        disabled={first.code ? second.code ? false : true : true}
-        onChange={handleChange}
-        value={hook}
-      />
-    </div>
+    <input
+      disabled={first.code ? second.code ? false : true : true}
+      onChange={handleChange}
+      value={hook}
+    />
   )
 }
 
