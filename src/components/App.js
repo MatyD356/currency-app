@@ -14,8 +14,10 @@ const App = () => {
   const [active, setActive] = useState('')
 
   useEffect(() => {
+    const pln = { currency: 'złoty', code: 'PLN', mid: 1 }
     fetch('http://api.nbp.pl/api/exchangerates/tables/a/')
       .then(response => response.json())
+      .then(data => [Object.assign({}, data[0], { rates: [...data[0].rates, pln] })])
       .then(data => setNbpData(data[0]))
   }, [])
 
