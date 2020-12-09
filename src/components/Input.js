@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Input = ({ hook, saveToHook }) => {
+const Input = ({ id, hook, saveToHook, changeActive }) => {
 
 
   const handleChange = (e) => {
+    id === 'first' ? changeActive(id) :
+      id === 'second' ? changeActive(id) :
+        null
     saveToHook(e.target.value)
   }
 
