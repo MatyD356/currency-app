@@ -2,6 +2,7 @@ import React from 'react'
 
 const Select = ({ data, saveToHook }) => {
 
+  //sending data to parent element
   const handleSelectChange = (e, callback) => {
     callback(data.rates[e.target.value])
   }

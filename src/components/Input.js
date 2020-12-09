@@ -4,7 +4,7 @@ const Input = ({ id, hook, saveToHook, changeActive, first, second }) => {
 
 
   const handleChange = (e) => {
-    //determine where display the output based on which was last edited
+    //determine where display the exchange output based on which was last edited
     id === 'first' ? changeActive(id) :
       id === 'second' ? changeActive(id) :
         null

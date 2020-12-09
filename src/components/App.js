@@ -12,7 +12,7 @@ const App = () => {
   const [firstCurrencyValue, setFirstCurrencyValue] = useState(0)
   const [secondCurrencyValue, setSecondCurrencyValue] = useState(0)
   const [active, setActive] = useState('')
-
+  //fetching data from nbp
   useEffect(() => {
     const pln = { currency: 'złoty', code: 'PLN', mid: 1 }
     fetch('http://api.nbp.pl/api/exchangerates/tables/a/')
@@ -20,7 +20,7 @@ const App = () => {
       .then(data => [Object.assign({}, data[0], { rates: [...data[0].rates, pln] })])
       .then(data => setNbpData(data[0]))
   }, [])
-
+  //exchanging values dependent of active hook which is seted in Input components
   useEffect(() => {
     if (active === 'first') {
       const exchanged = (firstCurrencyValue * firstCurrency?.mid) / secondCurrency?.mid;
