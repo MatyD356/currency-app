@@ -38,8 +38,22 @@ const App = () => {
       <h1>Currency App</h1>
       <Select data={nbpData} saveToHook={setFirstCurrency} />
       <Select data={nbpData} saveToHook={setSecondCurrency} />
-      <Input id='first' hook={firstCurrencyValue} saveToHook={setFirstCurrencyValue} changeActive={setActive} />
-      <Input id='second' hook={secondCurrencyValue} saveToHook={setSecondCurrencyValue} changeActive={setActive} />
+      <Input
+        id='first'
+        first={firstCurrency}
+        second={secondCurrency}
+        changeActive={setActive}
+        hook={firstCurrencyValue}
+        saveToHook={setFirstCurrencyValue}
+      />
+      <Input
+        id='second'
+        first={firstCurrency}
+        second={secondCurrency}
+        changeActive={setActive}
+        hook={secondCurrencyValue}
+        saveToHook={setSecondCurrencyValue}
+      />
     </div >
   )
 }
