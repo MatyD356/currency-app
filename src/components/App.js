@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { hot } from 'react-hot-loader'
 import '../styles/App.scss'
 import Exchange from './Exchange'
+import exchange from '../assets/exchange.svg';
 
 
 const App = () => {
   return (
     <div className='App' aria-label='App'>
       <h1>Currency App</h1>
+      <img src={exchange} className="App-logo" alt="logo" />
       <Exchange />
     </div >
   )

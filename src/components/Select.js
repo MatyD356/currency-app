@@ -8,10 +8,10 @@ const Select = ({ data, saveToHook }) => {
   }
 
   return (
-    <select onChange={(e) => handleSelectChange(e, saveToHook)} id='first-currency' aria-label='Select'>
+    <select data-testid='select' onChange={(e) => handleSelectChange(e, saveToHook)} id='first-currency' aria-label='Select'>
       <option value='' hidden>Wybierz walute</option>
       {data?.rates?.map((item, index) =>
-        <option key={item?.code} value={index}>
+        <option data-testid='option' key={item?.code} value={index}>
           {item?.currency}
         </option>
       )}
