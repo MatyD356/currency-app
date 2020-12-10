@@ -1,16 +1,30 @@
+@use './Variables.scss' as v;
+
 .Exchange{
-  display: flex;
+  flex: 0 1;
+  padding:  1rem;
+  border-radius: 20px;
+  box-shadow: v.$boxShadow;
 
-  &-inputs,
-  &-selects{
-    display:          flex;
-    flex-direction: column;
+  .first-currency,
+  .second-currency{
+    display: flex;
+    margin: 1rem;
 
-    input,
+    input{
+      border: 1px solid grey;
+      border-right: 0;
+      background: none;
+      padding: 1rem;
+      flex: 2 1 75%;
+      border-radius: 25px 0 0 25px;
+    }
     select{
-      width:   150px;
-      margin: .25rem;
-      padding: .5rem;
+      border: 1px solid grey;
+      background: none;
+      padding: 1rem;
+      flex: 1 5 25%;
+      border-radius: 0 25px 25px 0;
     }
   }
-}
+  }

@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='App' aria-label='App'>
       <h1>Currency App</h1>
-      <img src={exchange} className="App-logo" alt="logo" />
+      <img src={exchange} alt="logo" />
       <Exchange />
     </div >
   )

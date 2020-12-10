@@ -33,7 +33,7 @@ const Exchange = () => {
 
   return (
     <div className='Exchange' aria-label='Exchange'>
-      <div className='Exchange-inputs'>
+      <div className='first-currency'>
         <Input
           id='first'
           first={firstCurrency}
@@ -42,6 +42,9 @@ const Exchange = () => {
           hook={firstCurrencyValue}
           saveToHook={setFirstCurrencyValue}
         />
+        <Select data={nbpData} saveToHook={setFirstCurrency} />
+      </div>
+      <div className='second-currency'>
         <Input
           id='second'
           first={firstCurrency}
@@ -50,9 +53,6 @@ const Exchange = () => {
           hook={secondCurrencyValue}
           saveToHook={setSecondCurrencyValue}
         />
-      </div>
-      <div className='Exchange-selects'>
-        <Select data={nbpData} saveToHook={setFirstCurrency} />
         <Select data={nbpData} saveToHook={setSecondCurrency} />
       </div>
     </div >
