@@ -1,0 +1,16 @@
+.Exchange{
+  display: flex;
+
+  &-inputs,
+  &-selects{
+    display:          flex;
+    flex-direction: column;
+
+    input,
+    select{
+      width:   150px;
+      margin: .25rem;
+      padding: .5rem;
+    }
+  }
+}

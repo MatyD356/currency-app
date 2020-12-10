@@ -18,7 +18,8 @@ const Input = ({ id, hook, saveToHook, changeActive, first, second }) => {
 
   return (
     <input
-      disabled={first.code ? second.code ? false : true : true}
+      aria-label='Input'
+      disabled={first?.code ? second?.code ? false : true : true}
       onChange={handleChange}
       value={hook}
     />

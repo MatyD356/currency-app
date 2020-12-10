@@ -1,0 +1,11 @@
+@use './Variables' as v;
+@import url('https://meyerweb.com/eric/tools/css/reset/reset.css');
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+.App{
+  margin: 1rem;
+  font-family: v.$font;
+}
