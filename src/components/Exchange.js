@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../styles/Exchange.scss'
 import Select from './Select'
 import Input from './Input'
-
+import callNbp from '../apiCalls'
 
 const Exchange = () => {
   const [nbpData, setNbpData] = useState({})
@@ -14,11 +14,7 @@ const Exchange = () => {
 
   //fetching data from nbp
   useEffect(() => {
-    const pln = { currency: 'złoty', code: 'PLN', mid: 1 }
-    fetch('http://api.nbp.pl/api/exchangerates/tables/a/')
-      .then(response => response.json())
-      .then(data => [Object.assign({}, data[0], { rates: [...data[0].rates, pln] })])
-      .then(data => setNbpData(data[0]))
+    callNbp('http://api.nbp.pl/api/exchangerates/tables/a/', setNbpData)
   }, [])
   //exchanging values dependent of active hook which is seted in Input components
   useEffect(() => {
