@@ -12,7 +12,7 @@ const Select = ({ data, saveToHook }) => {
       <option value='' hidden>Wybierz walute</option>
       {data?.rates?.map((item, index) =>
         <option data-testid='option' key={item?.code} value={index}>
-          {item?.currency}
+          {item?.code}
         </option>
       )}
     </select>

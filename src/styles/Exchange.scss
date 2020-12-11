@@ -1,46 +1,89 @@
 @use './Variables.scss' as v;
 
 .Exchange{
-  padding:  1rem;
-  border-radius: 20px;
-  margin: 1rem;
+  padding:            1rem;
+  width:               30%;
+  border-radius:      20px;
   box-shadow: v.$boxShadow;
 
   .first-currency,
   .second-currency{
-    margin: 1rem;
+    margin:  1rem;
     display: flex;
 
+    span{
+    position: relative;
+    &::before{
+      content:          '';
+      top: calc(25% - 5px);
+      left:              0;
+      width:           2px;
+      height:          80%;
+      position:   absolute;
+      background:   grey;
+      border-radius:  25px;
+    }
+
+    &::after{
+      content:       '▼';
+      color:      grey;
+      top:     calc(25%);
+      right:          1%;
+      width:        20px;
+      height:       20px;
+      position: absolute;
+    }
+  }
     input,
     select{
-      padding: .5rem 1rem;
+      color:            grey;
       border: 1px solid grey;
-      border-right: 0;
-      background: none;
+      padding:      .5rem 1rem;
+      background:         none;
     }
     input{
-      flex: 1 1 75%;
+      flex:                1 1 75%;
+      position:           relative;
+      border-right:              0;
       border-radius: 25px 0 0 25px;
+
+    }
+    span{
+      flex:                0 1 25%;
+      border:     1px solid grey;
+      border-left:               0;
+      border-radius: 0 20px 20px 0;
+
     }
     select{
-      flex:0 1 25%;
-      border-radius: 0 25px 25px 0;
-      -moz-appearance:none; /* Firefox */
-      -webkit-appearance:none; /* Safari and Chrome */
-      appearance:none;
+      border:               0;
+      font-weight:        600;
+      appearance:        none;
+      -moz-appearance:   none; 
+      -webkit-appearance:none; 
     }
   }
   //mobile
   @media(max-width: 600px){
+
+    width:   90%;
+    margin: auto;
+    
     .first-currency,
     .second-currency{
 
+      &::before{
+        left: 55%;
+      }
       input,
       select{
         flex: 1 1 auto;
-        width: 100px;
+        width:   100px;
       }
-
+      span{
+        flex: 1 1 auto;
+        width:    50px;
+      }
     }
   }
 }

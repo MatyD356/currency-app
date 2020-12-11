@@ -42,7 +42,9 @@ const Exchange = () => {
           hook={firstCurrencyValue}
           saveToHook={setFirstCurrencyValue}
         />
-        <Select data={nbpData} saveToHook={setFirstCurrency} />
+        <span>
+          <Select data={nbpData} saveToHook={setFirstCurrency} />
+        </span>
       </div>
       <div className='second-currency'>
         <Input
@@ -53,7 +55,9 @@ const Exchange = () => {
           hook={secondCurrencyValue}
           saveToHook={setSecondCurrencyValue}
         />
-        <Select data={nbpData} saveToHook={setSecondCurrency} />
+        <span>
+          <Select data={nbpData} saveToHook={setSecondCurrency} />
+        </span>
       </div>
     </div >
   )
