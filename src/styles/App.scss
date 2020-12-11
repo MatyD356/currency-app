@@ -8,8 +8,53 @@
 .App{
   min-height:       100vh;
   font-family:    v.$font;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .Navigation{
+    text-align: center;
+    color: white;
+    background: v.$blue;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      left:0;
+      height: 100px;
+      bottom: -50px;
+      border-radius: 50% 50% 0 0;
+      background: white;
+    }
+
+    h1{
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem;
+    }
+  }
+
 
   img{
+    display: block;
+    margin: 1rem auto;
     width: 300px;
+  }
+
+  .Footer{
+    color: white;
+    background: gray;
+    position: relative;
+    
+
+  p{
+      font-size: 1rem;
+      font-weight: 300;
+      padding: 0.5rem;
+    }
   }
 }

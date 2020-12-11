@@ -8,9 +8,14 @@ import exchange from '../assets/exchange.svg';
 const App = () => {
   return (
     <div className='App' aria-label='App'>
-      <h1>Currency App</h1>
+      <div className='Navigation'>
+        <h1>Wymiana walut</h1>
+      </div>
       <img src={exchange} alt="logo" />
       <Exchange />
+      <div className='Footer'>
+        <p>Dane walutowe pochodzą z NBP</p>
+      </div>
     </div >
   )
 }
