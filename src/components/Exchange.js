@@ -11,6 +11,7 @@ const Exchange = () => {
   const [firstCurrencyValue, setFirstCurrencyValue] = useState(0)
   const [secondCurrencyValue, setSecondCurrencyValue] = useState(0)
   const [active, setActive] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
 
   //fetching data from nbp
   useEffect(() => {
@@ -19,8 +20,13 @@ const Exchange = () => {
   //exchanging values dependent of active hook which is seted in Input components
   useEffect(() => {
     if (active === 'first') {
-      const exchanged = (firstCurrencyValue * firstCurrency?.mid) / secondCurrency?.mid;
-      setSecondCurrencyValue(round(exchanged, 2))
+      if (firstCurrencyValue.length > 15) {
+        setErrorMsg('Entered number is to long')
+      } else {
+        const exchanged = (firstCurrencyValue * firstCurrency?.mid) / secondCurrency?.mid;
+        setSecondCurrencyValue(round(exchanged, 2))
+        setErrorMsg('')
+      }
     } else if (active === 'second') {
       const exchanged = (secondCurrencyValue * secondCurrency?.mid) / firstCurrency?.mid;
       setFirstCurrencyValue(round(exchanged, 2))
@@ -59,6 +65,9 @@ const Exchange = () => {
           <Select data={nbpData} saveToHook={setSecondCurrency} />
         </span>
       </div>
+      <p className='error'>
+        {errorMsg}
+      </p>
     </div >
   )
 }

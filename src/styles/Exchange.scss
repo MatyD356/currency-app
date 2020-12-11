@@ -2,7 +2,7 @@
 
 .Exchange{
   padding:            1rem;
-  width:               30%;
+  width:               20%;
   border-radius:      20px;
   box-shadow: v.$boxShadow;
 
@@ -62,6 +62,12 @@
       -moz-appearance:   none; 
       -webkit-appearance:none; 
     }
+  }
+  .error{
+    min-height: 1rem;
+    margin-left: 1rem;
+    font-size: .75rem;
+    color: v.$pink;
   }
   //mobile
   @media(max-width: 600px){

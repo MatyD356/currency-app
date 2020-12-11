@@ -9,7 +9,7 @@ const Input = ({ id, hook, saveToHook, changeActive, first, second }) => {
       id === 'second' ? changeActive(id) :
         null
 
-    //simple validation allowing only numbers and dot in decimal fashion
+    //simple validation allowing only numbers and dot in decimal numbers
     const regex = /^[+-]?(([1-9][0-9]*)?[0-9](\.[0-9]*)?|\.[0-9]+)$/;
     if (e.target.value === '' || regex.test(e.target.value)) {
       saveToHook(e.target.value)
