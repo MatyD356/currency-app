@@ -7,12 +7,11 @@ const Rates = ({ nbpData }) => {
   return (
     <main className='Rates'>
       {nbpData?.rates?.map(item => {
-        console.log(item.code.toLowerCase());
         if (item.code === 'PLN' || item.code === 'XDR') {
           return null;
         }
         return <div className='Rates-item' key={item.code}>
-          <div className={`currency-flag currency-flag-xl currency-flag-${item.code.toLowerCase()}`}></div>
+          <div className={`currency-flag currency-flag-xl currency-flag-${item.code.toLowerCase()} shadow`}></div>
           <div className='Rates-item-desc'>
             <p className='Rates-full-name'>{item.currency}</p>
             <p className='Rates-rate'>1 {item.code} = {item.mid.toFixed(4)} PLN</p>
