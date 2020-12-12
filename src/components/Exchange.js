@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import '../styles/Exchange.scss'
 import Select from './Select'
 import Input from './Input'
-import callNbp from '../apiCalls'
+import heroImg from '../assets/exchange.svg';
 
-const Exchange = () => {
-  const [nbpData, setNbpData] = useState({})
+
+const Exchange = ({ nbpData }) => {
   const [firstCurrency, setFirstCurrency] = useState({})
   const [secondCurrency, setSecondCurrency] = useState({})
   const [firstCurrencyValue, setFirstCurrencyValue] = useState(0)
@@ -13,10 +13,6 @@ const Exchange = () => {
   const [active, setActive] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
 
-  //fetching data from nbp
-  useEffect(() => {
-    callNbp('http://api.nbp.pl/api/exchangerates/tables/a/', setNbpData)
-  }, [])
   //exchanging values dependent of active hook which is seted in Input components
   useEffect(() => {
     if (active === 'first') {
@@ -38,7 +34,8 @@ const Exchange = () => {
   }
 
   return (
-    <div className='Exchange' aria-label='Exchange'>
+    <main className='Exchange' aria-label='Exchange'>
+      <img src={heroImg} alt="heroImg" />
       <div className='first-currency'>
         <Input
           id='first'
@@ -68,7 +65,7 @@ const Exchange = () => {
       <p className='error'>
         {errorMsg}
       </p>
-    </div >
+    </main >
   )
 }
 

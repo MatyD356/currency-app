@@ -1,0 +1,27 @@
+@use './Variables.scss' as  v;
+
+.Navigation{
+  text-align: center;
+  color: white;
+  background: v.$blue;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 60px;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left:0;
+    height: 100px;
+    bottom: -50px;
+    border-radius: 50% 50% 0 0;
+    background: white;
+  }
+
+  h1{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+  }
+}
