@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
+    "currency-flags": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0"

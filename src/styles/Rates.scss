@@ -3,11 +3,15 @@
 .Rates{
 
   &-item{
+    display:                  flex;
+    align-items:            center;
     padding:                  1rem;
     margin:                   1rem;
     box-shadow:       v.$boxShadow;
     border-radius: v.$borderRadius;
-
+    &-desc{
+      margin: 0 1rem;
+    }
     .Rates-full-name{
       font-weight: 600;
       margin-bottom: 0.5rem;

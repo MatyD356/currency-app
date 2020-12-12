@@ -1,8 +1,8 @@
 @use './Variables.scss' as v;
 
 .Exchange{
+  margin:                    1rem;
   padding:                   1rem;
-  width:                      20%;
   box-shadow:        v.$boxShadow;
   border-radius:  v.$borderRadius;
 
