@@ -1,0 +1,19 @@
+@use '../styles/Variables.scss' as v;
+
+.Rates{
+
+  &-item{
+    padding:                  1rem;
+    margin:                   1rem;
+    box-shadow:       v.$boxShadow;
+    border-radius: v.$borderRadius;
+
+    .Rates-full-name{
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      &::first-letter{
+        text-transform: uppercase;
+      }
+    }
+  }
+}
