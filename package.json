@@ -22,11 +22,10 @@
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
+    "currency-flags": "^3.1.0",
     "fetch-mock": "^9.11.0",
     "file-loader": "^6.2.0",
-    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
-    "node-fetch": "^2.6.1",
     "react-test-renderer": "^17.0.1",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
@@ -37,8 +36,9 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
-    "currency-flags": "^3.1.0",
+    "chart.js": "^2.9.4",
     "react": "^17.0.1",
+    "react-chartjs-2": "^2.11.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0"
   },
