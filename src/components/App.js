@@ -7,7 +7,7 @@ import Navbar from './Navbar'
 import Exchange from './Exchange'
 import Rates from './Rates'
 import Footer from './Footer'
-import Charts from './Charts'
+import Charts from './Chart'
 
 import { callNbp } from '../apiCalls'
 
@@ -22,7 +22,6 @@ const App = () => {
     <div className='App' aria-label='App'>
       <Navbar />
       <Exchange nbpData={nbpData} />
-      <Charts />
       <Rates nbpData={nbpData} />
       <Footer />
     </div >
