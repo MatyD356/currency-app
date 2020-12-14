@@ -22,17 +22,18 @@
       height:                   80%;
       position:            absolute;
       background:            grey;
-      border-radius:  v.$boxShadow;;
+      border-radius:  v.$boxShadow;
     }
 
     &::after{
-      content:       '▼';
-      color:      grey;
-      top:     calc(25%);
-      right:          1%;
-      width:        20px;
-      height:       20px;
-      position: absolute;
+      content:                '▼';
+      color:               grey;
+      top:                    50%;
+      transform: translateY(-50%);
+      right:                   3%;
+      width:                 20px;
+      height:                20px;
+      position:          absolute;
     }
   }
     input,
@@ -47,9 +48,12 @@
       position:           relative;
       border-right:              0;
       border-radius: 20px 0 0 20px;
-
+    }
+    input[type="text"]:disabled {
+      background: rgba(0,0,0,0.2);
     }
     span{
+      cursor:              pointer;
       flex:                0 1 25%;
       border:     1px solid grey;
       border-left:               0;
@@ -57,6 +61,8 @@
 
     }
     select{
+      cursor:         pointer;
+      width:             100%;
       border:               0;
       font-weight:        600;
       appearance:        none;
