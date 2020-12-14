@@ -20,16 +20,27 @@ const Chart = ({ days, currency }) => {
               label: `${data.code} to PLN`,
               data: data?.rates?.map(item => item.mid),
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
+                '#FF4267',
               ],
               borderColor: [
-                'rgba(255, 99, 132, 1)',
+                '#281C9D',
               ]
             }]
           }
         }
         options={{
-
+          scales: {
+            yAxes: [{
+              ticks: {
+                callback: (value, index, values) => index % 2 === 0 ? value : null
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                callback: (value, index, values) => index % 2 === 0 ? value : null
+              }
+            }]
+          }
         }}
       />
     </div>
