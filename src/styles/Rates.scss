@@ -4,6 +4,7 @@
 
   &-item{
     display:                  flex;
+    justify-content: space-between;
     align-items:            center;
     padding:                  1rem;
     margin:                   1rem;
@@ -29,6 +30,21 @@
     .Rates-rate{
       font-weight: 600;
       color:    grey;
+    }
+  }
+  &-item-flag{
+    display: flex;
+  }
+  &-item-buttons{
+    button{
+      cursor: pointer;
+      padding: .5rem 1rem;
+      margin: 0 1rem;
+      background: v.$blue;
+      border-radius: 20px;
+      border: none;
+      color: white;
+      font-weight: 600;
     }
   }
 }

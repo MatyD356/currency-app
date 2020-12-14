@@ -11,9 +11,7 @@ const Rates = ({ nbpData }) => {
         if (item.code === 'PLN' || item.code === 'XDR') {
           return null;
         }
-        return <div className='Rates-item' key={item.code}>
-          <RatesItem item={item} />
-        </div>
+        return <RatesItem item={item} key={item.code} />
       })}
     </main >
   )
