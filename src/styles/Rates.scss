@@ -35,9 +35,15 @@
   &-item-flag{
     display: flex;
   }
-  &-item-buttons{
+  &-item-chart{
+    display: flex;
+  
+  .Rates-item-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     button{
-      display: flex;
       cursor: pointer;
       padding: .5rem 1rem;
       margin: 0 1rem;
@@ -48,4 +54,5 @@
       font-weight: 600;
     }
   }
+}
 }

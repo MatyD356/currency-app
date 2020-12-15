@@ -39,6 +39,7 @@ const Chart = ({ days, currency }) => {
             }],
             xAxes: [{
               ticks: {
+                display: false,
                 callback: (value, index, values) => index % 4 === 0 ? value : null
               }
             }]

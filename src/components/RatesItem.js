@@ -13,8 +13,8 @@ const RatesItem = ({ item }) => {
           <p className='Rates-rate'>1 {item.code} = {item.mid.toFixed(4)} PLN</p>
         </div>
       </div>
-      <div className='Rates-item-buttons'>
-        <div>
+      <div className='Rates-item-chart'>
+        <div className='Rates-item-buttons'>
           <button onClick={() => setActiveChart(30)}>30days</button>
           <button onClick={() => setActiveChart(60)}>60days</button>
           <button onClick={() => setActiveChart(90)}>90days</button>
