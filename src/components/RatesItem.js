@@ -14,9 +14,11 @@ const RatesItem = ({ item }) => {
         </div>
       </div>
       <div className='Rates-item-buttons'>
-        <button onClick={() => setActiveChart(30)}>30days</button>
-        <button onClick={() => setActiveChart(60)}>60days</button>
-        <button onClick={() => setActiveChart(90)}>90days</button>
+        <div>
+          <button onClick={() => setActiveChart(30)}>30days</button>
+          <button onClick={() => setActiveChart(60)}>60days</button>
+          <button onClick={() => setActiveChart(90)}>90days</button>
+        </div>
         <Chart days={activeChart} currency={item.code} />
       </div>
     </div>

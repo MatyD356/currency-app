@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import { getCurrencyDetalis } from '../apiCalls'
 
+import { round } from '../function'
+
 const Chart = ({ days, currency }) => {
 
   const [data, setData] = useState('')
@@ -32,15 +34,22 @@ const Chart = ({ days, currency }) => {
           scales: {
             yAxes: [{
               ticks: {
-                callback: (value, index, values) => index % 2 === 0 ? value : null
+                callback: (value, index, values) => index % 2 === 0 ? round(value, 4) : null
               }
             }],
             xAxes: [{
               ticks: {
-                callback: (value, index, values) => index % 2 === 0 ? value : null
+                callback: (value, index, values) => index % 4 === 0 ? value : null
               }
             }]
+          },
+          animation: {
+            duration: 100
+          },
+          legend: {
+            display: false
           }
+
         }}
       />
     </div>

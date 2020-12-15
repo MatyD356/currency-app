@@ -3,6 +3,7 @@ import '../styles/Exchange.scss'
 import Select from './Select'
 import Input from './Input'
 import heroImg from '../assets/exchange.svg';
+import { round } from '../function'
 
 
 const Exchange = ({ nbpData }) => {
@@ -29,9 +30,6 @@ const Exchange = ({ nbpData }) => {
     }
   }, [firstCurrencyValue, secondCurrencyValue, firstCurrency, secondCurrency])
 
-  const round = (value, decimals) => {
-    return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals)
-  }
 
   return (
     <main className='Exchange' aria-label='Exchange'>

@@ -37,6 +37,7 @@
   }
   &-item-buttons{
     button{
+      display: flex;
       cursor: pointer;
       padding: .5rem 1rem;
       margin: 0 1rem;
