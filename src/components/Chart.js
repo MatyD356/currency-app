@@ -13,7 +13,7 @@ const Chart = ({ days, currency }) => {
   }, [days])
 
   return (
-    <div>
+    <div className='Rates-item-container'>
       <Line
         data={
           {

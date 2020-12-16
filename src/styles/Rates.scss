@@ -10,7 +10,6 @@
     margin:                   1rem;
     box-shadow:       v.$boxShadow;
     border-radius: v.$borderRadius;
-
     &-desc{
       margin: 0 1rem;
     }
@@ -52,6 +51,30 @@
       border: none;
       color: white;
       font-weight: 600;
+    }
+  }
+}
+@media (max-width: 425px){
+  &-item{
+    flex-direction: column;
+
+    .Rates-item-chart{
+      flex-direction: column;
+
+      .Rates-item-buttons{
+        flex-direction: row;
+        justify-content: space-around;
+        
+        button{
+          margin: 1rem 0;
+        }
+        & button:nth-child(2){
+          margin: 1rem;
+        }
+      } 
+      .Rates-item-container{
+        width: 90%;
+      }
     }
   }
 }
