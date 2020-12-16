@@ -14,34 +14,35 @@
 
     span{
     position: relative;
+    
     &::before{
-      content:                   '';
-      top:          calc(25% - 5px);
-      left:                       0;
-      width:                    2px;
-      height:                   80%;
-      position:            absolute;
-      background:            grey;
-      border-radius:  v.$boxShadow;
+      content:                       '';
+      top:              calc(25% - 5px);
+      left:                           0;
+      width:                        1px;
+      height:                       80%;
+      position:                absolute;
+      background:             #C9C9C9;
+      border-radius:       v.$boxShadow;
     }
 
     &::after{
-      content:                '▼';
-      color:               grey;
-      top:                    50%;
-      transform: translateY(-50%);
-      right:                   3%;
-      width:                 20px;
-      height:                20px;
-      position:          absolute;
+      content:                   '▼';
+      color:               #C9C9C9;
+      top:                       50%;
+      transform:    translateY(-50%);
+      right:                      3%;
+      width:                    20px;
+      height:                   20px;
+      position:             absolute;
     }
   }
     input,
     select{
-      color:            grey;
-      border: 1px solid grey;
-      padding:            1rem;
-      background:         none;
+      color:              v.$blue;
+      border: 1px solid #C9C9C9;
+      padding:               1rem;
+      background:            none;
     }
     input{
       flex:                1 1 75%;
@@ -51,11 +52,12 @@
     }
     input[type="text"]:disabled {
       background: rgba(0,0,0,0.2);
+      color:                white;
     }
     span{
       cursor:              pointer;
       flex:                0 1 25%;
-      border:     1px solid grey;
+      border:     1px solid #C9C9C9;
       border-left:               0;
       border-radius: 0 20px 20px 0;
 
@@ -77,11 +79,13 @@
     color: v.$pink;
   }
   //mobile
-  @media(max-width: 600px){
+  @media(max-width: 425px){
 
     width:   90%;
     margin: auto;
-    
+    img{
+      width: 75%;
+    }
     .first-currency,
     .second-currency{
 
@@ -95,7 +99,6 @@
       }
       span{
         flex: 1 1 auto;
-        width:    50px;
       }
     }
   }
