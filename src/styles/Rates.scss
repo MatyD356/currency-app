@@ -78,4 +78,13 @@
     }
   }
 }
+
+        //lg-desktop
+        @media(min-width: 1440px){
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+flex: 1 1 45%;
+        }
 }

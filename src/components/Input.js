@@ -18,6 +18,7 @@ const Input = ({ id, hook, saveToHook, changeActive, first, second }) => {
 
   return (
     <input
+      id={`${id}-currency`}
       type='text'
       aria-label='Input'
       disabled={first?.code ? second?.code ? false : true : true}
