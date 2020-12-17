@@ -9,7 +9,7 @@ const Chart = ({ days, currency }) => {
   const [data, setData] = useState('')
 
   useEffect(() => {
-    getCurrencyDetalis(`http://api.nbp.pl/api/exchangerates/rates/a/${currency}/last/${days}/?format=json`, setData)
+    getCurrencyDetalis(`https://api.nbp.pl/api/exchangerates/rates/a/${currency}/last/${days}/?format=json`, setData)
   }, [days])
 
   return (
