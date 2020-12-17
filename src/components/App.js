@@ -16,7 +16,7 @@ const App = () => {
   const [nbpData, setNbpData] = useState({})
   //fetching data from nbp
   useEffect(() => {
-    callNbp('http://api.nbp.pl/api/exchangerates/tables/a/', setNbpData)
+    callNbp('https://api.nbp.pl/api/exchangerates/tables/a/', setNbpData)
   }, [])
   return (
     <div className='App' aria-label='App'>
