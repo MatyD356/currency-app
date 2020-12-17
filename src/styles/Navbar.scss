@@ -24,4 +24,13 @@
     font-weight: 700;
     padding: 1rem;
   }
+  @media(min-width: 426px){
+    background: transparent;
+    padding: 0;
+    color: v.$blue;
+    &::before{
+      width: 0;
+      height: 0;
+    }
+  }
 }

@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <header className='Navigation'>
-      <h1>Wymiana walut</h1>
+      <h1>Sprawdź kursy walut</h1>
     </header>
   )
 }
