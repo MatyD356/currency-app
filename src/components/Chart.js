@@ -44,9 +44,17 @@ const Chart = ({ days, currency }) => {
               }
             }]
           },
-          animation: {
-            duration: 100
+          elements: {
+            line: {
+              tension: 0
+            }
           },
+          animation: {
+            duration: 0
+          }, hover: {
+            animationDuration: 0,
+          },
+          responsiveAnimationDuration: 0,
           legend: {
             display: false
           }

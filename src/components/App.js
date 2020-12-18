@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { hot } from 'react-hot-loader'
 
 import '../styles/App.scss'
 
 import Navbar from './Navbar'
 import Exchange from './Exchange'
-import Rates from './Rates'
-import Footer from './Footer'
+const Rates = React.lazy(() => import('./Rates'))
+const Footer = React.lazy(() => import('./Footer'))
 
 import { callNbp } from '../apiCalls'
 
@@ -21,8 +21,10 @@ const App = () => {
     <div className='App' aria-label='App'>
       <Navbar />
       <Exchange nbpData={nbpData} />
-      <Rates nbpData={nbpData} />
-      <Footer />
+      <Suspense fallback={<div>...wczytuję</div>}>
+        <Rates nbpData={nbpData} />
+        <Footer />
+      </Suspense>
     </div >
   )
 }

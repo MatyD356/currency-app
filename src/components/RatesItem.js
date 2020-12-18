@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Chart from './Chart'
+import React, { Suspense, useState } from 'react'
+const Chart = React.lazy(() => import('./Chart'))
 
 const RatesItem = ({ item }) => {
   const [activeChart, setActiveChart] = useState(30)
@@ -22,7 +22,9 @@ const RatesItem = ({ item }) => {
           <button onClick={() => setActiveChart(60)}>60 dni</button>
           <button onClick={() => setActiveChart(90)}>90 dni</button>
         </div>
-        <Chart days={activeChart} currency={item.code} />
+        <Suspense fallback={<div>...</div>}>
+          <Chart days={activeChart} currency={item.code} />
+        </Suspense>
       </div>
     </div>
   )

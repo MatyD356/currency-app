@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from '@hot-loader/react-dom';
-import App from './components/App'
+const App = React.lazy(() => import('./components/App'))
 
 ReactDOM.render(
-  <App />,
+  <Suspense fallback={<div>...</div>}>
+    <App />
+  </Suspense>,
   document.getElementById('root')
 )
