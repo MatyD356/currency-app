@@ -7,7 +7,6 @@ import Navbar from './Navbar'
 import Exchange from './Exchange'
 import Rates from './Rates'
 import Footer from './Footer'
-import Charts from './Chart'
 
 import { callNbp } from '../apiCalls'
 
